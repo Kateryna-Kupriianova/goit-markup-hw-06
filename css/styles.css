@@ -60,8 +60,8 @@ h1, h2, h3, h4, h5, h6, p{
 .header-navigation {
   display: flex;
   align-items: center; 
-  flex-grow: 1;
-  justify-content: space-between;
+  /* flex-grow: 1;
+  justify-content: space-between; */
 }
 
 .header-list{
@@ -108,6 +108,7 @@ h1, h2, h3, h4, h5, h6, p{
     color: #404BBF;
 }
 
+
 .curent::after {
     content: "";
     position: absolute;
@@ -126,6 +127,11 @@ h1, h2, h3, h4, h5, h6, p{
     background-color: #404BBF;
 }
 
+.activ-page-link:hover,
+.activ-page-link:focus {
+    color: #404BBF;
+}
+
 .menu-open-btn {
     border: none;
     background-color: transparent;
@@ -138,10 +144,11 @@ h1, h2, h3, h4, h5, h6, p{
     top: 0;
     left: 0;
     z-index: 1;
-    padding: 16px 24px 24px 40px;
+    padding:  24px 24px 40px 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 168px;
     opacity: 0;
     visibility: hidden;
     pointer-events: auto;
@@ -151,31 +158,48 @@ h1, h2, h3, h4, h5, h6, p{
     display: block;
     margin-left: auto;
     margin-bottom: 24px;
+    border-radius: 50%;
+    border: 1px #E7E9FC;
+    color: #2E2F42;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .mob-item >.link {
     color: #2E2F42;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
+
 .mob-item:not(:last-child) {
     margin-bottom: 40px ;
 }
 
-.activ-page-link:hover,
-.activ-page-link:focus {
-    color: #404BBF;
-}
+
 
 .mob-menu-contacts-list {
      margin-bottom: 48px;
 }
-
+.mob-item {
+    color:  #434455;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    
+}
 .mob-menu-social-list {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 40px;
 }
 
@@ -194,7 +218,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .contacts {
-  font-style: normal;  
+    font-style: normal; 
+    
 }
 
 .contacts-list {
@@ -203,14 +228,14 @@ h1, h2, h3, h4, h5, h6, p{
     gap: 40px;
 }
 
-.address-link {
+/* .address-link {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
-}
+} */
 
 .address-link:hover,
 .address-link:focus {
@@ -238,7 +263,7 @@ h1, h2, h3, h4, h5, h6, p{
     background-position: center;
     background-size: cover;
     max-width: 320px;
-    height: 432px;
+    /* height: 432px; */
     margin: 0 auto;
 }
 
@@ -246,20 +271,19 @@ h1, h2, h3, h4, h5, h6, p{
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero-section {
-        background-image: linear-gradient (
+        background-image: linear-gradient(
              rgba(46, 47, 66, 0.7),
              rgba(46, 47, 66, 0.7)),
              url(../images/people-office-mob-2x.jpg);
     }  
-} */
+}  */
    
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
     .hero-section {
-    background-image: linear-gradient 
-        (rgba(46, 47, 66, 0.7),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
         url(../images/people-office-mob-2x.jpg);
 }
@@ -277,6 +301,8 @@ only screen and (min-resolution: 2dppx) {
     /* max-width: 496px; */
     max-width: 288 px;
     margin: 0 auto; 
+    /* padding: 72px 16px 0 16px; */
+    
 }
 
 .button {
@@ -290,6 +316,7 @@ only screen and (min-resolution: 2dppx) {
     cursor: pointer;
     /* margin-top: 48px;  */
     margin-top: 72px;
+    /* margin-bottom: 72px; */
     margin-left: auto;
     margin-right: auto;
     padding: 16px 32px;
@@ -370,8 +397,10 @@ only screen and (min-resolution: 2dppx) {
 
 .team-section {
     background-color:#F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px; */
+    /* padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 /* .team-section-container {
@@ -382,7 +411,8 @@ only screen and (min-resolution: 2dppx) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    /* gap: 24px; */
+    gap: 72px;
 }
 
 .team-section-item {
@@ -494,14 +524,15 @@ only screen and (min-resolution: 2dppx) {
     background-color:#2E2F42;
     /* padding: 100px 0;
      */
-     padding: 96px 16px;
+     
 }
 .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 72px;
-    
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 
@@ -510,10 +541,16 @@ only screen and (min-resolution: 2dppx) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+    align-items: center;
+}   
 
 .footer-logo-container {
-    margin-right: 120px;
+    /* margin-right: 120px; */
+    margin-bottom: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-logo {
@@ -527,6 +564,8 @@ only screen and (min-resolution: 2dppx) {
     display: inline-block;
     margin-bottom: 16px;
     padding: 0;
+    
+
 }
 
 .footer .text {
@@ -539,7 +578,11 @@ only screen and (min-resolution: 2dppx) {
 }
 
 .footer-social {
-    margin-right: 80px;
+    /* margin-right: 80px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-social-list-title {
@@ -806,6 +849,12 @@ only screen and (min-resolution: 2dppx) {
     color: #4D5AE5;
 }
 
+.footer-modal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 .footer-modal-text {
     color:  #FFF;
     font-size: 16px;
@@ -890,17 +939,35 @@ only screen and (min-resolution: 2dppx) {
    gap: 40px; 
     }
 
+    .curent {
+    color: #404BBF;
+    }
+
+    .curent::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 4px;
+        background-color: #404BBF;
+        border-radius: 2px;
+        width: 100%;
+        display: block;
+        flex-shrink: 0; 
+    }
+
     .contacts-list {
     display: flex;
     display: block;
     gap: 40px;
     } 
+    
     .header-logo {
         margin-right: 76px;
     }
     .hero-section{
         max-width: 768px; 
-        height: 436px;
+        /* height: 436px; */
         padding: 136px 112px;
         background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -913,13 +980,22 @@ only screen and (min-resolution: 2dppx) {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .hero-section {
-            background-image: linear-gradient (
+            background-image: linear-gradient(
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
             url(../images/people-office-tab-2x.jpg);
         }
     }
+    .address-link {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.16;
+        letter-spacing: 0.04em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
+    
     .hero-title {
         font-size: 56px; 
         line-height: 1.07; 
@@ -955,26 +1031,33 @@ only screen and (min-resolution: 2dppx) {
     .portfolio-section-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 64px 24px;
+        gap: 72px 24px;
        
     }
 
     .portfolio-section-item {
         width: calc((100% - 24px) /2);
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 0;
     }
 
     .footer {
-        padding: 96px 108px;
+        /* padding: 96px 108px; */
+    }
+    .footer-container {
+        width: 584px;
     }
     .footer-container-tab-first {
         display: flex;
         flex-direction: row;
         gap: 24px;
+        /* margin-right: 120px; */
 
     }
     .footer-social {
         margin-left: 0;
+        margin-right: 80px;
+    
     }
 
     .footer-logo-container {
@@ -1015,6 +1098,26 @@ only screen and (min-resolution: 2dppx) {
    
     }
 
+    .curent {
+    color: #404BBF;
+    }
+
+    .curent::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 4px;
+        background-color: #404BBF;
+        border-radius: 2px;
+        width: 100%;
+        display: block;
+        flex-shrink: 0; 
+    }
+    .contacts {
+        margin-left: auto;
+    }
+
     .contacts-list {
     display: flex;
     gap: 40px;
@@ -1027,7 +1130,7 @@ only screen and (min-resolution: 2dppx) {
 
     .hero-section {
         max-width: 1440px;
-        height: 600px;
+        /* height: 600px; */
         padding: 188px 0;
         background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1040,7 +1143,7 @@ only screen and (min-resolution: 2dppx) {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .hero-section {
-            background-image: linear-gradient (
+            background-image: linear-gradient(
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
             url(../images/people-office-2x.jpg);
@@ -1052,7 +1155,15 @@ only screen and (min-resolution: 2dppx) {
         max-width: 496px;
        
     }
-
+    .address-link {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        ;
+    }
     .button {
         margin-top: 48px;
     }
@@ -1105,6 +1216,10 @@ only screen and (min-resolution: 2dppx) {
         padding-top: 120px;
         padding-bottom: 120px;
     }
+    .team-section {
+        padding-top: 120px; 
+        padding-bottom: 120px; 
+    }
 
     .portfolio-section-list {
         display: flex;  
@@ -1126,8 +1241,26 @@ only screen and (min-resolution: 2dppx) {
     .footer-container {
         flex-direction: row;
         align-items: baseline; 
+        width: 961px;
+        gap: 0;
+    }
+
+    .footer-container-tab-first{
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0;
     }
     
+    .footer-modal {
+        flex-direction: row;
+        align-items: baseline;
+        margin-left: 0;
+    }
+    .footer-logo-container {
+        margin-right: 120px;
+        margin-bottom: 0;
+    }
+
 }
 
 .portfolio-section-card-content > h3 {
@@ -1149,3 +1282,4 @@ only screen and (min-resolution: 2dppx) {
     margin-bottom: 8px;
     text-align: center;
 }
+
