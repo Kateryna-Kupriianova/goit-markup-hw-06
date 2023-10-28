@@ -584,8 +584,8 @@ only screen and (min-resolution: 2dppx) {
 .footer-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    gap: 24px;
 }   
 
 .footer-logo-container {
@@ -893,12 +893,7 @@ only screen and (min-resolution: 2dppx) {
     color: #4D5AE5;
 }
 
-.footer-modal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
+
 .footer-modal-text {
     color:  #FFF;
     font-size: 16px;
@@ -906,6 +901,7 @@ only screen and (min-resolution: 2dppx) {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-input {
@@ -925,10 +921,6 @@ only screen and (min-resolution: 2dppx) {
 
 .footer-input::placeholder {
     color: #FFFFFF;
-}
-.footer-form {
-    display: flex;
-    gap: 24px;
 }
 
 .footer-form-btn {
@@ -1090,22 +1082,28 @@ only screen and (min-resolution: 2dppx) {
     .footer {
         padding: 96px 0 96px; 
     }
+
     .footer-container {
         width: 584px;
+        gap: 0;
     }
+
     .footer-container-tab-first {
         display: flex;
-        flex-direction: row;
+        /* flex-direction: row; */
+        justify-content: flex-start;
+        align-items: flex-start;
         gap: 24px;
+        
         /* margin-right: 120px; */
 
     }
     .footer-social {
         margin-left: 0;
         display: flex;
-        flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
+        margin-top: 0 auto;
         
     }
 
@@ -1114,20 +1112,18 @@ only screen and (min-resolution: 2dppx) {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        
+    }
+
+    .footer-modal-text {
+        text-align: left;
     }
     .footer-form {
-        display: initial;
+        flex-direction: row;
+        gap: 24px;
     }
 
-    .footer-form-lable {
-        margin-right: auto;
-        margin-left: 0;
-    }
-
-    .footer-form-btn {
-        
-    }
+   
+    
 }
 
 @media screen and (min-width: 1158px) {
@@ -1308,11 +1304,7 @@ only screen and (min-resolution: 2dppx) {
         gap: 0;
     }
     
-    .footer-modal {
-        flex-direction: row;
-        align-items: baseline;
-        margin-left: 0;
-    }
+   
     .footer-logo-container {
         margin-right: 120px;
         margin-bottom: 0;
